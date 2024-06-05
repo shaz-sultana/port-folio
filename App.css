@@ -1,0 +1,152 @@
+/* Global Styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #c98b8b;
+  color: #c40e8d;
+}
+
+a {
+  text-decoration: none;
+  color: #759bc4;
+}
+
+h1,
+h2 {
+  color: #cf8585;
+}
+
+/* Header Styles */
+header {
+  background-color: #282c34;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header nav a {
+  margin: 0 1em;
+  color: rgb(17, 159, 57);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #fb619e;
+}
+
+/* Section Styles */
+section {
+  padding: 4em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#about,
+#projects,
+#contact {
+  background: #23b53e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+#about h2,
+#projects h2,
+#contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #125ba9;
+}
+
+/* Projects Section Styles */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
+}
+
+.project-card {
+  background: #fff;
+  color: #24be74;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card a {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Contact Section Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1em;
+}
+
+form input,
+form textarea,
+form button {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+form button {
+  background-color: #61dafb;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+form button:hover {
+  background-color: #21a1f1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
